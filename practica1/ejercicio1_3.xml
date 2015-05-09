@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<menucomida>
+    
+    <platillo>
+        <nombre>Carpaccio de pescado</nombre>        
+        <tipo>Entrantes frios</tipo>
+        <costo>8.50</costo>        
+    </platillo>
+    
+    <platillo>
+        <nombre>Lasaña a la boloñesa</nombre>        
+        <tipo>Entrantes calientes</tipo>
+        <costo>5.6</costo>        
+    </platillo>  
+  
+</menucomida>
+

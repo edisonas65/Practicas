@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+¿Cómo presenta el navegador el documento XML? 
+Me permite visualizar los siguientes
+Materia Horario SOA 17-20
+ Con el siguiente mensaje
+This page contains the following errors:
+
+error on line 10 at column 13: Namespace prefix h on table is not defined
+error on line 11 at column 14: Namespace prefix h on tr is not defined
+error on line 12 at column 18: Namespace prefix h on td is not defined
+error on line 17 at column 13: Namespace prefix h on table is not defined
+error on line 18 at column 14: Namespace prefix h on tr is not defined
+error on line 19 at column 18: Namespace prefix h on td is not defined
+Below is a rendering of the page up to the first error.
+
+¿Muestra la tabla HTML o muestra el árbol XML?
+Me permitio visulalizar los datos en forma de tabla 
+
+¿Por qué?
+Porque utileze prefijos para que me permiata visualizar 
+
+
+
+
+-->
+
+
+<root>
+    <h:table>
+        <h:tr>
+            <h:td>Materia</h:td>
+            <h:td>Horario</h:td>
+        </h:tr>
+    </h:table>
+    
+    <h:table>
+        <h:tr>
+            <h:td>SOA</h:td>
+            <h:td>17-20</h:td>
+        </h:tr>
+    </h:table>
+    
+    
+    
+</root>

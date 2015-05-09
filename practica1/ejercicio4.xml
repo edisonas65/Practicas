@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<root match="/">
+<h:html>
+<h:body>
+<h:h2>My CD Collection</h:h2>
+<h:table border="1">
+<h:tr>
+<h:th style="text-align:left">Title</h:th>
+<h:th style="text-align:left">Artist</h:th>
+</h:tr>
+<roots select="catalog/cd">
+<h:tr>
+<h:td><xsl:value-of select="title"/></h:td>
+<h:td><xsl:value-of select="artist"/></h:td>
+</h:tr>
+</roots>
+</h:table>
+</h:body>
+</h:html>
+</root>
