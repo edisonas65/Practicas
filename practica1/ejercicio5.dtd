@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE tiendacd [
+<!ELEMENT cd (album, autor, anio, precio)>
+<!ELEMENT album (\#PCDATA)>
+<!ELEMENT autor (\#PCDATA)>
+<!ELEMENT anio (\#PCDATA)>
+<!ELEMENT precio (\#PCDATA)>
+]>

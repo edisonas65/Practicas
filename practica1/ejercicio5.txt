@@ -1,0 +1,27 @@
+
+Investigar que maneras existen para dar formato un documento XML
+de manera que se pueda visualizar en el navegador de manera similar
+a un HTML. 
+
+1- Mediante la creacion de hojas de estilo .css
+
+2- Mediante la utilizacion de un DTD ya que define la estructura de un documento xml
+   DTD (Document Type Definition): archivo que almacena la definición formal de un tipo 
+   de documento y especifica su estructura lógica. En general la utilización del DTD es
+   opcional aunque conveniente. En función de si se utiliza o no DTD los documentos serán
+   'válidos' o sólo 'bien formados'.
+
+3- LA utilizacion de XLS XSLT (XML Stylesheets Transformation Language, o lenguaje de
+   transformación basado en hojas de estilo) que es un lenguaje utilizado para convertir 
+   documentos XML en otros documentos XML o en otros formatos diferentes. Por ejemplo XSLT
+   puede convertir un XML con un DTD a otro que siga un DTD diferente, convertirlo a un formato 
+   de presentación como WML o HTML.
+
+
+
+
+¿Qué técnica es la más recomendada según la W3C?
+
+ La tecnica mas recomendada es el uso de un DTD. Un DTD no es mas que un archivo de texto con extensión .dtd 
+ cuyo contenido es un elemento raíz o tipo y una descripción de todos los elementos que intervienen en dicho 
+ elemento raíz.

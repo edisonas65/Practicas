@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<xsd:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+<xsd:annotation>
+    <xsd:documentation>
+      Shiporder schema as Salami slice design.
+    </xsd:documentation>
+</xsd:annotation>
+   
+    <xsd:element name="shiporder">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="orderperson" />
+                <xsd:element ref="shipto" />
+                <xsd:element ref="name" />
+                <xsd:element ref="address" />
+                <xsd:element ref="city" />
+                <xsd:element ref="country" />
+                <xsd:element ref="item" />
+                <xsd:element ref="title" />
+                <xsd:element ref="note" />
+                <xsd:element ref="quatity" />
+                <xsd:element ref="price" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+            
+                <xsd:element name="orderperson" />
+                <xsd:element name="shipto" />
+                <xsd:element name="name" />
+                <xsd:element name="address" />
+                <xsd:element name="city" />
+                <xsd:element name="country" />
+                <xsd:element name="item" />
+                <xsd:element name="title" />
+                <xsd:element name="note" />
+                <xsd:element name="quatity" />
+                <xsd:element name="price" />
+</xsd:schema>
+                
+                
+                

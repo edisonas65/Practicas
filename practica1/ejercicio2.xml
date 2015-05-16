@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-¿Cómo presenta el navegador el documento XML? 
+¿Cómo presenta el navegador el documento XML?
+ 
 Me permite visualizar los siguientes
 Materia Horario SOA 17-20
  Con el siguiente mensaje
@@ -18,11 +19,7 @@ Below is a rendering of the page up to the first error.
 Me permitio visulalizar los datos en forma de tabla 
 
 ¿Por qué?
-Porque utileze prefijos para que me permiata visualizar 
-
-
-
-
+Porque utileze namespace para que me permiata visualizar 
 -->
 
 
@@ -39,8 +36,6 @@ Porque utileze prefijos para que me permiata visualizar
             <h:td>SOA</h:td>
             <h:td>17-20</h:td>
         </h:tr>
-    </h:table>
-    
-    
-    
+    </h:table>   
 </root>
+

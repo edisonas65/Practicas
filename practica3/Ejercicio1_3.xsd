@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+
+<xsd:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+<xsd:annotation>
+    <xsd:documentation>
+        Shiporder schema as Venetian Blind design.
+    </xsd:documentation>
+</xsd:annotation>
+
+<!−− Single global root element exposed −−>
+<xsd:element name="shiporder" type="tns:shiporderType"/>
+
+<!−− The root is given a type that is defined here,
+using all externally defined elements. −−>
+    <xsd:complexType name="shiporderType">
+    <xsd:sequence>
+    <xsd:element name="orderperson" type="tns:orderpersonType"/>
+    <xsd:element name="shipto" type="tns:shiptoType"/>
+    <xsd:element name="item" type="tns:itemType"/>
+    </xsd:sequence>
+    </xsd:complexType>
+
+
+<xsd:simpleType name="orderpersonType">
+    <xsd:restriction base="xsd:string">
+        <xsd:minLength value="1"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="shiptoType">
+<xsd:sequence>
+<xsd:element name="name" type="xsd:nameType"/>
+    <xsd:element name="address" type="xsd:addressType"/>
+    <xsd:element name="city" type="xsd:cityType"/>
+    <xsd:element name="country" type="xsd:countryType"/>
+</xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="item" maxOccurs="unbounded">
+     <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="title" type="xsd:string"/>
+            <xsd:element name="note" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="quantity" type="xsd:positiveInteger"/>
+            <xsd:element name="price" type="xsd:decimal"/>
+         </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+
+</xsd:schema>

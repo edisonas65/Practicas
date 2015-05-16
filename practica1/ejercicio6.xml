@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
+<!DOCTYPE tiendacd [
+<!ENTITY nombre " Edison Asto.">
+<!ENTITY materia "Arquitectura Orientada a Servicios">
+<!ENTITY universidad " EPN">
+]>
+
 <tiendacd>
         
     <cd tipo="rock">
@@ -15,6 +22,6 @@
         <anio>2008</anio>
         <precio>22.99</precio>        
     </cd>     
-    <footer>&nombre</footer>
+    <footer>&nombre; &materia; &universidad;</footer>
     
 </tiendacd>

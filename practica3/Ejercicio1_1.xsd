@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<xsd:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+<xsd:annotation>
+    <xsd:documentation>
+      Shiporder schema as Russian doll design.
+    </xsd:documentation>
+</xsd:annotation>
+   
+    <xsd:element name="shiporder">
+        <xsd:complexType>
+            <xsd:sequence>
+                
+                <xsd:element name="orderperson" type="xsd:string"/>
+                
+                <xsd:element name="shipto">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="name" type="xsd:string"/>
+                            <xsd:element name="address" type="xsd:string"/>
+                            <xsd:element name="city" type="xsd:string"/>
+                            <xsd:element name="country" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+                <xsd:element name="item" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="title" type="xsd:string"/>
+                            <xsd:element name="note" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="quantity" type="xsd:positiveInteger"/>
+                            <xsd:element name="price" type="xsd:decimal"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                
+            </xsd:sequence>
+            <xsd:attribute name="orderid" type="xs:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+</xsd:schema>
