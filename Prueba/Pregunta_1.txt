@@ -1,0 +1,6 @@
+Describa brevemente cuál es el problema principal que se intenta resolver con SOA?
+
+Lo que intenta resolver soa en una empresa es resolver las brechas 
+entre la gente de negocios y las tecnologìas de informaciòn tambien busca la 
+duplicacion de funcionalidad y aislamiento de procesos que faciliten las tareas 
+al personal

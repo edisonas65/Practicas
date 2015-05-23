@@ -1,0 +1,125 @@
+
+
+<?xml version="1.0"?>
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+  
+    <xs:element name="factura" type="xs:tipoID"/>
+    <xs:element name="datos_cliente" type="xs:tipoID"/>
+    <xs:element name="datos_factura" type="xs:tipoID"/>
+    <xs:element name="telefono" type="xs:tipoTelFax"/> 
+    <xs:element name="fax" type="xs:tipoTelFax"/>
+    
+    <xsd:element name="valor_iva" type="xsd:tipoDecimales"/> 
+    <xsd:element name="precio" value="xsd:tipoDecimales"/> 
+    <xsd:element name="subtotal" value="tipoDecimales"/> 
+    
+    <xsd:element name="cod" value="codigoTipo"/> 
+  
+    <xsd:element name="desc" value="descTipo"/> 
+    
+    <xsd:element name="porcentaje_iva" value="porcentaje_iva_tipo"/> 
+
+    <xsd:element name="cantidad" type="cantidadTipo"/> 
+    
+    <xsd:element name="precio_promocion" type="tipoDecimales"/> 
+    
+
+    
+    <!-- El número de factura (n_fac), número de cliente (n_cli) y número de pedido (n_ped) 
+         son del tipo “tipoID”, que se define como un entero positivo de 4 cifras. Estos 
+         atributos son obligatorios. No tienen por qué ser únicos dentro del documento. -->
+    
+      <xsd:simpleType name="tipoID">
+        <xsd:restriction base="xsd:integer">
+            <xsd:Length value="4"/>            
+        </xsd:restriction>
+    </xsd:simpleType>
+      
+      <!-- Los números de teléfono (telefono) y fax (fax) de la empresa pueden o no aparecer en
+           la factura, pero siempre que lo hagan deberán tener los valores (teléfono 2334455, fax 2667788). -->
+           
+     <xsd:simpleType name="tipoTelFax">
+        <xsd:restriction>
+            <xsd:pattern value="\d{7}"/>            
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <!-- La forma de pago puede tomar los valores “efectivo”, “tarjeta” y “cheque”.-->    
+          
+     <xsd:simpleType name="datos_factura">  
+    <xsd:restriction ref="f_pago">
+        <xsd:pattern  value="{efectivo, tarjeta, cheque }" />        
+    </xsd:restriction>
+    </xsd:simpleType>
+
+ 
+    <!-- El elemento fecha es de tipo “date”.-->
+    <xsd:element name="fecha" type="xsd:date"/> 
+    
+    <!--La moneda tiene que aparecer siempre, y siempre toma el valor “dolar”.-->    
+    
+    
+    <!-- El elemento valor_iva tiene que aparecer siempre.-->    
+    
+    
+    
+    <!-- Los valores de precio, subtotal, valor_iva y total serán siempre un número con dos decimales. -->
+     <xsd:simpleType name="tipoDecimales">
+        <xsd:restriction base="xsd:double">
+            <xsd:fractionDigits value="2"/>            
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <!-- Los códigos de los artículos son cadenas de entre 5 y 15 caracteres.-->      
+  
+   <xsd:simpleType name="codigoTipo">
+        <xsd:restriction>    
+            <xsd:pattern value="\w{5,15}"/>                    
+         </xsd:restriction>
+    </xsd:simpleType>
+  
+<!--Las descripciones de los artículos son cadenas entre 1 y 100 caracteres. -->        
+    
+    <xsd:simpleType name="descTipo">    
+         <xsd:restriction base="xsd:string">    
+            <xsd:pattern value="\w{1,100}"/>                    
+         </xsd:restriction>
+    </xsd:simpleType>
+    
+    <!-- El atributo de porcentaje_iva es un número entero positivo de 2 cifras. -->
+    <xsd:simpleType name="porcentaje_iva_tipo">    
+         <xsd:restriction base="xsd:integer">    
+            <xsd:length value="2"/>                    
+         </xsd:restriction>
+    </xsd:simpleType>
+    
+    <!-- El elemento cantidad puede tener un valor entre 1 y 500. -->
+    <xs:simpleType name="cantTipo">
+         <xsd:restriction base="xsd:integer">    
+            <xsd:maxExclusive value="500"/>                    
+            <xsd:minExclusive value="1"/>                    
+         </xsd:restriction>
+    </xsd:simpleType>
+    
+    
+    <!-- Dentro del elemento producto puede aparecer el elemento precio O precio_promocion pero no los dos.-->
+    <!-- El número de productos en la factura debe ser mínimo 1 y sin límite superior. -->
+    <xs:element name="producto" minOccurs="1" type="tipoProducto" />       
+    
+    
+    <xs:simpleType name="tipoProducto">
+        <xs:complexType>
+        <xs:choice>
+            <xs:element ref="precio"/>            
+            <xs:element ref="precio_promocion"/>            
+        </xs:choice>
+        </xs:complexType>
+    </xs:simpleType>   
+
+    
+</xs:schema>
+

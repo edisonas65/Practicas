@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+
+    
+<factura n_fac="999" xmlns="http://www.microsoft.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.microsoft.com Pregunta2.xsd >
+
+  <datos_empresa>
+    <nombre>Equipos Digitales S.L.</nombre>
+    <dir>Av. 12 de Octubre</dir>
+    <ciudad cod_postal="EC170157">Quito</ciudad>
+    <provincia>Pichincha</provincia>
+    <telefono>2334455<telefono/>
+  </datos_empresa>
+  <datos_cliente n_cli="879">
+    <nombre>Juan Perez Criollo</nombre>
+    <dir_env>Av. 10 de Agosto N3-577</dir_env>
+    <ciudad cod_postal="EC280436">Quito</ciudad>
+    <provincia>Pichincha</provincia>
+  </datos_cliente>
+  <datos_factura n_ped="731" porcentaje_iva="12" f_pago= "efectivo" moneda="dolar">
+    <fecha>2015-05-22</fecha>
+    <producto>
+      <cod>MII93000F/8</cod>
+      <desc>MICRO PENTIUM IV 3000MHZ FB800</desc>
+      <cant>1</cant>
+      <precio>230.00</precio>
+    </producto>
+    <producto>
+      <cod>MB8QDIP4</cod>
+      <desc>PLACA BASE QDI P4</desc>
+      <cant>1</cant>
+      <precio_promocion>180.00</precio_promocion>
+    </producto>
+    <producto>
+      <cod>MEDD512M32</cod>
+      <desc>DIMM DDR 512MB 3200</desc>
+      <cant>2</cant>
+      <precio_promocion>40.00</precio_promocion>
+    </producto>
+    <producto>
+      <cod>HD250GSA7</cod>
+      <desc>DISCO DURO 250GB S-ATA 7200</desc>
+      <cant>4</cant>
+      <precio>120.00</precio>
+    </producto>
+    <subtotal>970.00</subtotal>
+    <valor_iva>116.40</valor_iva>
+    <total>1086.40</total>
+  </datos_factura>
+  
+</factura>
+
+
