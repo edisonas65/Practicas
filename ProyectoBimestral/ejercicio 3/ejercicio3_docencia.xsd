@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.trabajo.com/docencia"
+ elementFormDefault="unqualified"
+ attributeFormDefault="qualified">
+   
+
+    <xsd:simpleType name="tipoPensum">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\w[A-Z]{5}"/> 
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    
+        <xsd:complexType name="tipoAsignatura">
+            <xsd:sequence>
+                <xsd:element name="nombre" type="xsd:string"/>
+                <xsd:element name="horas" type="xsd:positiveInteger"/>
+                <xsd:element name="profesor" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    
+    
+</xsd:schema>

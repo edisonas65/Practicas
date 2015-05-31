@@ -1,0 +1,110 @@
+<xsd:schema version="1.0"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+ 
+  <!-- ///////////////////////////////////////// -->
+  
+ <xsd:element name="genero">
+    <xsd:complexType>
+        <xsd:choice>
+        <xsd:element name="hombre" type="xsd:string"/>
+        <xsd:element name="mujer" type="xsd:string"/>
+        </xsd:choice>
+    </xsd:complexType>
+</xsd:element>   
+
+<!-- ///////////////////////////////////////// -->
+
+<xsd:element name="nacimiento">
+    <xsd:complexType>                  
+            <xsd:attribute name="dia" type="tipoDia"/>
+            <xsd:attribute name="mes" type="tipoMes"/>
+            <xsd:attribute name="anio" type="tipoAnio"/>                    
+    </xsd:complexType>
+</xsd:element>   
+      
+       
+ <xsd:simpleType name="tipoDia">
+    <xsd:restriction base="xsd:integer">
+        <xsd:minInclusive value="1"/>
+        <xsd:maxInclusive value="31"/>
+    </xsd:restriction>
+ </xsd:simpleType>  
+ 
+
+  <xsd:simpleType name="tipoMes">
+      <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="Enero"/>
+        <xsd:enumeration value="Febrero"/>
+        <xsd:enumeration value="Marzo"/>
+        <xsd:enumeration value="Abril"/>
+        <xsd:enumeration value="Mayo"/>
+        <xsd:enumeration value="Junio"/>
+        <xsd:enumeration value="Julio"/>
+        <xsd:enumeration value="Agosto"/>
+        <xsd:enumeration value="Septiembre"/>
+        <xsd:enumeration value="Octubre"/>
+        <xsd:enumeration value="Noviembre"/>
+        <xsd:enumeration value="Diciembre"/>
+      </xsd:restriction>
+   </xsd:simpleType> 
+   
+
+    <xsd:simpleType name="tipoAnio">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1900"/>
+            <xsd:maxInclusive value="2015"/>
+        </xsd:restriction>
+    </xsd:simpleType> 
+
+
+<!-- ///////////////////////////////////////// -->
+
+    <xsd:simpleType name="tipoNombre">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+        </xsd:restriction>
+    </xsd:simpleType>  
+
+    <xsd:element name="nombre" type="tipoNombre"/>
+    <xsd:element name="calle" type="tipoNombre"/>
+    <xsd:element name="ciudad" type="tipoNombre"/>
+    <xsd:element name="provincia" type="tipoNombre"/>
+    <xsd:element name="pais" type="tipoNombre"/>
+
+<!-- ///////////////////////////////////////// --> 
+
+    <xsd:element name="direccion">
+       <xsd:complexType>
+           <xsd:sequence>
+               <xsd:element ref="calle" maxOccurs="unbounded"/>
+               <xsd:element ref="ciudad" />
+               <xsd:element ref="provincia" />
+               <xsd:element ref="pais" />             
+            </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element> 
+
+<!-- ///////////////////////////////////////// -->
+
+    <xsd:element name="personas">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="persona" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="persona">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="nombre"/>
+                <xsd:element ref="nacimiento" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="direccion" maxOccurs="unbounded"/>
+                <xsd:element ref="genero" maxOccurs="1"/>                                    
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element> 
+
+</xsd:schema>

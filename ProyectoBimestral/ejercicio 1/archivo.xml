@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros 
+    xmlns="http://www.w3schools.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.w3schools.com schema.xsd">
+
+
+<libro>
+<titulo>Cien años de Soledad</titulo>
+<autor>Gabriel García Márquez</autor>
+<area>Novela</area>
+<editorial>Editorial1</editorial>
+<precio>10.00</precio>
+<publicacion>1960</publicacion>
+</libro>
+
+<libro>
+<titulo>El señor de los anillos</titulo>
+<autor>J.R.R Tolkien</autor>
+<area>Fantasía</area>
+<editorial>Editorial2</editorial>
+<precio>15.46</precio>
+<publicacion>2001</publicacion>
+</libro>
+
+<libro>
+<titulo>SOA Simple</titulo>
+<autor>Lonneke Dikmans</autor>
+<area>Técnica</area>
+<editorial>Editorial3</editorial>
+<precio>45.78</precio>
+<publicacion>2015</publicacion>
+</libro>
+
+
+<libro>
+<titulo>Nacho Lee</titulo>
+<autor>Nacho</autor>
+<area>Lectura</area>
+<editorial>Editorial2</editorial>
+<precio>11.23</precio>
+<publicacion>1986</publicacion>
+</libro>
+
+<libro>
+<titulo>22/11/1963</titulo>
+<autor>Stephen King</autor>
+<area>Novela</area>
+<editorial>Editorial4</editorial>
+<precio>5.63</precio>
+<publicacion>2009</publicacion>
+</libro>
+
+<libro>
+<titulo>Hamlet</titulo>
+<autor>William Shakespeare</autor>
+<area>Novela</area>
+<editorial>Editorial1</editorial>
+<precio>23.51</precio>
+<publicacion>1920</publicacion>
+</libro>
+
+</libros>
+

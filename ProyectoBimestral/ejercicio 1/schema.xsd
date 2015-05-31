@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<xsd:schema  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com"
+elementFormDefault="qualified">
+    
+
+     <xsd:annotation>
+        <xsd:documentation>
+            Schema de archivo.xml
+        </xsd:documentation>
+    </xsd:annotation>   
+    
+     <xsd:element name="libros" type="tipoLibros"/>
+    
+    <xsd:complexType name="tipoLibros">
+      <xsd:sequence>
+        <xsd:element name="libro" minOccurs="0" maxOccurs="unbounded">
+            
+            <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="titulo" type="xsd:string"/>
+                <xsd:element name="autor" type="xsd:string"/>
+                <xsd:element name="area" type="xsd:string"/>
+                <xsd:element name="editorial" type="xsd:string"/>
+                <xsd:element name="precio" type="xsd:double"/>
+                <xsd:element name="publicacion" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>            
+            
+        </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+     
+    
+         
+ </xsd:schema>
+
+
+
