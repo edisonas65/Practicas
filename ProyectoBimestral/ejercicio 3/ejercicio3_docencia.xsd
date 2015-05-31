@@ -7,7 +7,7 @@
 
     <xsd:simpleType name="tipoPensum">
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="\w[A-Z]{5}"/> 
+            <xsd:pattern value="[a-zA-Z0-9]{5}"/> 
         </xsd:restriction>
     </xsd:simpleType>
     
