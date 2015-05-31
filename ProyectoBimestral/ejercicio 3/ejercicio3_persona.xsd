@@ -20,8 +20,10 @@
                 </xsd:element>
                 <xsd:element name="comentario" type="xsd:string" minOccurs="1"/>
             </xsd:sequence>
+           
+            <xsd:attribute name="nacimiento" type="xsd:date"/>    
             
-            <xsd:attribute name="nacimiento" type="xsd:date"/>
+            
             
         </xsd:complexType>
     

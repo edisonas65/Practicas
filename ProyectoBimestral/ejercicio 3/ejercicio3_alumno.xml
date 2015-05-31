@@ -1,41 +1,35 @@
+
 <?xml version="1.0" encoding="utf-8"?>
-<alu:alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="
+<alu:alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
   http://www.trabajo.com/persona persona.xsd 
   http://www.trabajo.com/docencia docencia.xsd 
   http://www.trabajo.com/alumno alumno.xsd" 
   xmlns:per="http://www.trabajo.com/persona" 
   xmlns:doc="http://www.trabajo.com/docencia" 
   xmlns:alu="http://www.trabajo.com/alumno">
-    
-    <persona nacimiento="1999-10-20">
-        
-        <datos>
-            <nombre>Pepe</nombre>
-            <apellidos>Garcia</apellidos>
-            <dni>25390952X</dni>
-        </datos>
-        <comentario>repetidor</comentario>
-        
-    </persona>    
-    
-    
-   <datos_academicos>
-       
-        <pensum>1ASIR</pensum>
-        <asignatura>
-            <nombre>Lenguajes de Marcas</nombre>
-            <horas>4</horas>
-            <profesor>Juan Moreno</profesor>
-        </asignatura>
 
-        <asignatura>
-            <nombre>Fundamentos del Hardware</nombre>
-            <horas>3</horas>
-            <profesor>Virginia LÃ³pez</profesor>
-        </asignatura>  
-         
-   </datos_academicos>
+  <per:persona per:nacimiento="1999-10-20">
+    <per:datos>
+      <per:nombre>Pepe</per:nombre>
+      <per:apellidos>Garcia</per:apellidos>
+      <per:dni>25390952X</per:dni>
+    </per:datos>
+    <per:comentario>repetidor</per:comentario>
+  </per:persona>
+
+  <datos_academicos>
+    <doc:pensum>1ASIR</doc:pensum>
+
+    <doc:asignatura>
+      <doc:nombre>Lenguajes de Marcas</doc:nombre>
+      <doc:horas>4</doc:horas>
+      <doc:profesor>Juan Moreno</doc:profesor>
+    </doc:asignatura>
     
+    <doc:asignatura>
+      <doc:nombre>Fundamentos del Hardware</doc:nombre>
+      <doc:horas>3</doc:horas>
+      <doc:profesor>Virginia López</doc:profesor>
+    </doc:asignatura>
+  </datos_academicos>
 </alu:alumno>
-
