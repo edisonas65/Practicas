@@ -11,18 +11,22 @@
     <xsd:element name="alumno">
         
       <xsd:complexType>
+          
           <xsd:sequence>
               
          <xsd:element name = "persona" type="per:tipoPersona" maxOccurs = "unbounded" />
-         <xsd:element name = "datos_academicos" maxOccurs = "unbounded" /> 
-         <!--        
+         <xsd:element name = "datos_academicos" maxOccurs = "unbounded" > 
+                
         <xsd:complexType>
              <xsd:sequence>
-                 <doc:element name = "pensum"  type="doc:pensum" maxOccurs = "unbounded" />   
-                 <doc:element name = "asigantura" type="doc:asignatura" maxOccurs = "unbounded" />                 
+                 <xsd:element name = "pensum"  type="doc:tipoPensum" maxOccurs = "unbounded" />   
+                 <xsd:element name = "asigantura" type="doc:tipoAsignatura" maxOccurs = "unbounded" />                 
              </xsd:sequence>
-          </xsd:complexType>  -->
-          </xsd:sequence>       
+          </xsd:complexType>  
+         </xsd:element>
+         
+          </xsd:sequence>
+                 
        </xsd:complexType>                
        
      </xsd:element> 
